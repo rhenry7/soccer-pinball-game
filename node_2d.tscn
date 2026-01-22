@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dbl84wicr0avj"]
+[gd_scene load_steps=15 format=3 uid="uid://dbl84wicr0avj"]
 
 [ext_resource type="Texture2D" uid="uid://dr8g2ystw8vdf" path="res://SoccerPinball/Pitch.png" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://08sgnxuynbea" path="res://SoccerPinball/Soccer_Pinball-3 5.png" id="2_ir8iy"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dlre6cpn0vogy" path="res://SoccerPinball/Soccer_Pinball-5 4.png" id="7_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://cj73hvbpldxil" path="res://SoccerPinball/Soccer_Pinball-6 3.png" id="8_hqns4"]
 [ext_resource type="Texture2D" uid="uid://bsosrf6fh8eqg" path="res://SoccerPinball/Soccer_Pinball-2 5.png" id="9_4d7sh"]
+[ext_resource type="Script" uid="uid://doit2aiqfithy" path="res://left_paddle.gd" id="11_0h7mo"]
 [ext_resource type="Texture2D" uid="uid://c5tyohoje3apt" path="res://SoccerPinball/Untitled_Artwork-2 5.png" id="11_hqns4"]
 [ext_resource type="Script" uid="uid://bvktxyjn2pam5" path="res://ball.gd" id="12_x0ka3"]
 
@@ -88,9 +89,11 @@ flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 1771.1874, 1354.6357, 2309.3828)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="LeftPaddle" type="StaticBody2D" parent="."]
+script = ExtResource("11_0h7mo")
+rest_angle = 4.0
 
-[node name="FlipperOne" type="Sprite2D" parent="StaticBody2D"]
+[node name="FlipperOne" type="Sprite2D" parent="LeftPaddle"]
 position = Vector2(48.00006, 2604.0002)
 rotation = -0.52279204
 scale = Vector2(1.1226171, 1.3255241)
@@ -98,7 +101,7 @@ texture = ExtResource("9_4d7sh")
 region_enabled = true
 region_rect = Rect2(0, 1783.4713, 1336.21, 2315.525)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftPaddle"]
 polygon = PackedVector2Array(422, 3227, 781, 3216, 701, 3358, 1191, 3307, 1390, 3432, 1316, 3534, 155, 4149, -1160, 1804, -574, 1451)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
