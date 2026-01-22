@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 # Physics properties
-@export var bounce_force_multiplier: float = 1.5  # How much to amplify bounce on collision
+@export var bounce_force_multiplier: float = 2.0  # How much to amplify bounce on collision
 @export var decay_rate: float = 0.98  # How quickly the ball loses speed (0.98 = 2% loss per physics frame)
 @export var min_velocity_threshold: float = 10.0  # Minimum velocity before stopping amplification
 @export var rotation_speed: float = 5.0  # How fast the ball rotates while moving

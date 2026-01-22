@@ -43,8 +43,8 @@ region_enabled = true
 region_rect = Rect2(1833.71, 1150.8479, 777.29004, 1246.821)
 
 [node name="Knee" type="Sprite2D" parent="."]
-position = Vector2(382.00003, 2610.0002)
-rotation = -0.26444232
+position = Vector2(672, 2656.0002)
+rotation = -0.14027467
 scale = Vector2(1.1084507, 1.1387352)
 texture = ExtResource("3_kdubu")
 region_enabled = true
