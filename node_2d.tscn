@@ -1,0 +1,117 @@
+[gd_scene load_steps=14 format=3 uid="uid://dbl84wicr0avj"]
+
+[ext_resource type="Texture2D" uid="uid://dr8g2ystw8vdf" path="res://SoccerPinball/Pitch.png" id="1_0hol4"]
+[ext_resource type="Texture2D" uid="uid://08sgnxuynbea" path="res://SoccerPinball/Soccer_Pinball-3 5.png" id="2_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://sien1a8djrs3" path="res://SoccerPinball/Soccer_Pinball-4 5.png" id="2_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://bwfmgay4754am" path="res://SoccerPinball/Soccer_Pinball-8 3.png" id="3_kdubu"]
+[ext_resource type="Texture2D" uid="uid://c7s2kn7b5876d" path="res://SoccerPinball/Soccer_Pinball-12.png" id="4_d21ai"]
+[ext_resource type="Texture2D" uid="uid://b2gnax1joqxwe" path="res://SoccerPinball/Soccer_Pinball-10.png" id="5_rj586"]
+[ext_resource type="Texture2D" uid="uid://cmy5ih355h5mm" path="res://SoccerPinball/Soccer_Pinball-11.png" id="6_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://dlre6cpn0vogy" path="res://SoccerPinball/Soccer_Pinball-5 4.png" id="7_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://cj73hvbpldxil" path="res://SoccerPinball/Soccer_Pinball-6 3.png" id="8_hqns4"]
+[ext_resource type="Texture2D" uid="uid://bsosrf6fh8eqg" path="res://SoccerPinball/Soccer_Pinball-2 5.png" id="9_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://c5tyohoje3apt" path="res://SoccerPinball/Untitled_Artwork-2 5.png" id="11_hqns4"]
+[ext_resource type="Script" uid="uid://bvktxyjn2pam5" path="res://ball.gd" id="12_x0ka3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hqns4"]
+radius = 153.05228
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-22, -88)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1344, 2162.4817)
+scale = Vector2(1.0103409, 0.9933023)
+texture = ExtResource("1_0hol4")
+flip_v = true
+
+[node name="KneeTwo" type="Sprite2D" parent="."]
+position = Vector2(2558.0002, 2227.0002)
+rotation = -0.36826557
+scale = Vector2(1.2155548, 0.8464217)
+texture = ExtResource("2_ir8iy")
+region_enabled = true
+region_rect = Rect2(1256.3643, 1666.7739, 1354.6357, 2352.3765)
+
+[node name="Header" type="Sprite2D" parent="."]
+position = Vector2(2281, 2146)
+rotation = -0.052976325
+scale = Vector2(1.179888, 1.1798879)
+texture = ExtResource("2_q6r6c")
+region_enabled = true
+region_rect = Rect2(1833.71, 1150.8479, 777.29004, 1246.821)
+
+[node name="Knee" type="Sprite2D" parent="."]
+position = Vector2(382.00003, 2610.0002)
+rotation = -0.26444232
+scale = Vector2(1.1084507, 1.1387352)
+texture = ExtResource("3_kdubu")
+region_enabled = true
+region_rect = Rect2(0, 1316.6813, 1065.9629, 1265.247)
+
+[node name="FootOne" type="Sprite2D" parent="."]
+position = Vector2(592, 1962)
+texture = ExtResource("4_d21ai")
+region_enabled = true
+region_rect = Rect2(0, 2428.379, 1170.3765, 1271.3892)
+
+[node name="GloveLeft" type="Sprite2D" parent="."]
+position = Vector2(523, 644)
+texture = ExtResource("5_rj586")
+region_enabled = true
+region_rect = Rect2(0, 0, 1194.9443, 1218.4097)
+
+[node name="GloveRight" type="Sprite2D" parent="."]
+position = Vector2(2182, 703)
+texture = ExtResource("6_4d7sh")
+region_enabled = true
+region_rect = Rect2(1686.3022, 0, 924.69775, 1267.5454)
+
+[node name="BlottomFlipperRight" type="Sprite2D" parent="."]
+position = Vector2(2127, 3946)
+texture = ExtResource("7_ir8iy")
+region_enabled = true
+region_rect = Rect2(1514.3271, 3607.6382, 1096.6729, 567.3618)
+
+[node name="BottomFlipperLeft" type="Sprite2D" parent="."]
+position = Vector2(605, 3946)
+texture = ExtResource("8_hqns4")
+region_enabled = true
+region_rect = Rect2(0, 3607.6382, 1115.0986, 567.3618)
+
+[node name="FlipperTwo" type="Sprite2D" parent="."]
+position = Vector2(2878, 2903)
+rotation = 0.7819946
+scale = Vector2(1.0642118, 1.1725854)
+texture = ExtResource("9_4d7sh")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 1771.1874, 1354.6357, 2309.3828)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="FlipperOne" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(48.00006, 2604.0002)
+rotation = -0.52279204
+scale = Vector2(1.1226171, 1.3255241)
+texture = ExtResource("9_4d7sh")
+region_enabled = true
+region_rect = Rect2(0, 1783.4713, 1336.21, 2315.525)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(422, 3227, 781, 3216, 701, 3358, 1191, 3307, 1390, 3432, 1316, 3534, 155, 4149, -1160, 1804, -574, 1451)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+script = ExtResource("12_x0ka3")
+
+[node name="Ball" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1264, 2487)
+rotation = -0.0026864104
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("11_hqns4")
+region_enabled = true
+region_rect = Rect2(1240.3835, 2781.6445, 328.87744, 322.50684)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(1264, 2487)
+shape = SubResource("CircleShape2D_hqns4")
